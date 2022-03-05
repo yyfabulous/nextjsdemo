@@ -17,7 +17,12 @@ function About(props: any) {
 
 export async function getStaticProps() {
   // 调用外部 API 获取博文列表
-  const res = await fetch(`${server}/api/user`);
+  const res = await fetch(`${server}/api/user`, {
+    headers: {
+      'User-Agent': '*',
+      Accept: 'application/json; charset=UTF-8'
+    }
+  });
   const data = await res.json();
 
   return {
