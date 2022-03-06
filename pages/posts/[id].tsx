@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router';
-import { server } from '../../config';
+import { useRouter } from "next/router";
+import { server } from "../../config";
 
 function Post(props: any) {
   const router = useRouter();
@@ -20,8 +20,8 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      posts
-    }
+      posts,
+    },
   };
 }
 
