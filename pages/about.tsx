@@ -4,7 +4,7 @@ import { server } from '../config';
 
 function About(props: any) {
   return (
-    <div className="text">
+    <div className="text flex hover:bg-red-700">
       About
       <div>{props.data.name}</div>
       <Image src={'/images/sakura.jpg'} width={100} height={100} alt="sakura"></Image>
